@@ -19,5 +19,5 @@ This project is a simple and responsive **image slideshow** built using **HTML**
 
 1. All images are placed inside a container.
 2. JavaScript keeps track of the current slide index.
-3. Clicking “Next” or “Previous” updates the visible image using DOM manipulation.
+
 
