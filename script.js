@@ -1,22 +1,19 @@
-let myImage = document.getElementById("slideshow");
-let images = ["images/image_1.jpg","images/image_2.jpg","images/image_3.png","images/image_4.png"];
-let i = 0;
-// myImage.setAttribute('src','images/image_1.jpg');
-/****ORRRRRRRRRRRRRRRRRRRRRRRRRRR */
-// myImage.setAttribute('src',images[0]);
+// array contain all images
+// function slideshow
+var i = 0;
+var slidesImages = ["images/image_1.jpg","images/image_2.jpg","images/image_3.png","images/image_4.png"];
 
-function slideshow() {
-    // console.log("log");
-    myImage.setAttribute('src',images[i]);
-    i++;
+// Expression function
+var slideShow = function () {
+    document.slideshow.src = slidesImages[i];
+    
+    if( i<slidesImages.length - 1 ){
+        i++;
 
-    if (i >= images.length){
+    } else {
         i = 0;
-    } 
-
-    setTimeout(function(){
-        slideshow();
-    },2000)
+    }
+    setTimeout("slideShow()",2000);
 }
 
-slideshow();
+slideShow();
